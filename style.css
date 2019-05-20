@@ -1,0 +1,164 @@
+/* Backgrounds */
+body {
+  background-color: gainsboro;
+}
+
+/* button1  Transition on hover*/
+.button1 {
+  display: block;
+  width: 48%;
+  padding: 20px;
+  margin: 50px auto;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: tomato;
+  transition-property: background-color;
+  transition-duration: .4s;
+}
+
+.button1:hover {
+  background-color: chocolate;
+}
+
+/* Transition Delay on hover td_delay*/
+.td_delay {
+  margin-top: 50px;
+  background-color: tomato;
+  color: #fff;
+  text-align: center;
+  height: 200px;
+  width: 20%;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+
+.td_delay:hover {
+  width: 100%;
+}
+
+/* Transition timing on containers*/
+.containers {
+  margin: 10px;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.box {
+  padding: 10px;
+  background-color: teal;
+  color: #fff;
+  width: 80px;
+  margin: 20px;
+  position: relative;
+  left: 0;
+  transition-property: left;
+  transition-duration: 1s;
+}
+
+.box p {
+  text-align: center;
+  line-height: 50px;
+}
+
+.containers:hover .box {
+  left: 80%;
+  background-color: tomato;
+}
+
+#ease {
+  transition-timing-function: ease;
+}
+
+#linear {
+  transition-timing-function: linear;
+}
+
+#ease-in {
+  transition-timing-function: ease-in;
+}
+
+#ease-out {
+  transition-timing-function: ease-out;
+}
+
+#ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+/* cubix bezier when hover on particular box*/
+.bg-1 {
+  background-color: tomato;
+  text-align: center;
+  color: #fff;
+}
+
+.containerb {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+}
+
+.boxb {
+  background-color: teal;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  left: 0;
+  transition-property: left;
+  transition-duration: 1s;
+}
+
+.containerb:hover .boxb {
+  left: 90%;
+}
+
+#one .boxb {
+  transition-timing-function: cubic-bezier(.03, .9, .97, -0.08);
+}
+
+#two .boxb {
+  transition-timing-function: cubic-bezier(.69, .03, .97, -0.08);
+}
+
+#three .boxb {
+  transition-timing-function: cubic-bezier(.8, -0.43, .6, 1.55);
+}
+
+/*multiple transiiton 1 when hover */
+.boxm {
+  height: 200px;
+  width: 200px;
+  background-color: teal;
+  transition-property: height, width;
+  transition-duration: 1s;
+  transition-timing-function: ease-out,
+    cubic-bezier(1, -0.29, .25, 1.05);
+}
+
+.boxm:hover {
+  height: 300px;
+  width: 500px;
+}
+/*multiple transiiton 2 when hover */
+.button2{
+    padding: 20px;
+    display: block;
+    width: 50%;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    border: 7px solid tomato;
+    background-color: #101010;
+    transition-property: background-color,
+    border-color;
+    transition-duration: 1s, 2s;
+    transition-delay: 0s, 1s;
+}
+.button2:hover{
+background-color: teal;
+    border-color: #101010;
+}
