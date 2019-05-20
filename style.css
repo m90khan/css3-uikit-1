@@ -1,6 +1,7 @@
 /* Backgrounds */
 body {
   background-color: gainsboro;
+  color: #fff;
 }
 
 /* button1  Transition on hover*/
@@ -142,23 +143,454 @@ body {
   height: 300px;
   width: 500px;
 }
+
 /*multiple transiiton 2 when hover */
-.button2{
-    padding: 20px;
-    display: block;
-    width: 50%;
-    cursor: pointer;
-    color: #fff;
-    text-align: center;
-    margin: 20px auto;
-    border: 7px solid tomato;
-    background-color: #101010;
-    transition-property: background-color,
+.button2 {
+  padding: 20px;
+  display: block;
+  width: 50%;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  margin: 20px auto;
+  border: 7px solid tomato;
+  background-color: #101010;
+  transition-property: background-color,
     border-color;
-    transition-duration: 1s, 2s;
-    transition-delay: 0s, 1s;
+  transition-duration: 1s, 2s;
+  transition-delay: 0s, 1s;
 }
-.button2:hover{
-background-color: teal;
-    border-color: #101010;
+
+.button2:hover {
+  background-color: teal;
+  border-color: #101010;
+}
+
+/* TRansition Shorthand writing property */
+.button3 {
+  border: none;
+  padding: 20px;
+  display: block;
+  width: 60%;
+  margin: 20px auto;
+  color: #fff;
+  background-color: teal;
+  /*            transition: color 0.5s 1s ease, background-color 1s 1s cubic-bezier(0,0.2,.8,1);*/
+  transition: all 0.3s 1s ease-out;
+}
+
+.button3:hover {
+  background-color: #fff;
+  color: teal;
+}
+
+/* Tradient Effect */
+.boxh {
+  width: 100%;
+  height: 500px;
+  background: tomato;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00223E, #FFA17F);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 200%;
+  background-position: top left;
+  margin: 0 auto;
+  transition: background-position 1s;
+}
+
+.boxh:hover {
+  background-position: top right;
+}
+
+.boxh:hover h1 {
+  color: #00223E;
+}
+
+.boxh h1 {
+  line-height: 500px;
+  text-align: center;
+  font-size: 5em;
+  color: #FFA17F;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: color 1s;
+  font-family: 'Poiret One', cursive;
+}
+
+/* Fading in and out CARDS */
+.containerf {
+  height: 400px;
+  background-image: url(aboutgermany.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0% 0%;
+  transition: background-position 0.3s;
+  margin-bottom: 10%;
+}
+
+.containerf:hover {
+  background-position: 0% 20%;
+}
+
+.containerf .text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding-top: 150px;
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
+  transition: opacity 0.6s;
+}
+
+.containerf:hover .text {
+  opacity: 1;
+}
+
+.text {
+  opacity: 0;
+}
+
+.text h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.text p {
+  width: 70%;
+  font-size: 1.2em;
+  margin: auto;
+}
+
+.cards-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.cards-container h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.button4 {
+  padding: 20px;
+  border: none;
+  background-color: teal;
+  color: #fff;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.card {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  background-color: teal;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  padding: 10px;
+}
+
+.card:last-child {
+  transition-delay: 0.2s;
+}
+
+.button4:hover~.card {
+  opacity: 1;
+}
+
+/* Menu hover effects */
+.menu1 {
+  background-color: #EF7E56;
+  color: #fff;
+}
+.buttons-container{
+    margin-top: 20px;
+    text-align: center;
+}
+.button5{
+    padding: 20px;
+    margin: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+    font-size: 1.2em;
+
+}
+#one1{
+    border: 3px solid transparent;
+    background-color: #fff;
+    color: #EF7E56;
+    transition: all 0.3s;
+}
+#one1:hover{
+    border: 3px solid #fff;
+    color: #fff;
+    background-color: #EF7E56;
+}
+
+#two2{
+    position: relative;
+}
+#two2:before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+#two2:hover:before{
+    width: 100%;
+}
+#two2:after{
+    content: '';
+    height: 0%;
+    width: 2px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: #fff;
+    transition: height 0.3s;
+}
+#two2:hover:after{
+    height: 100%;
+}
+
+#three3{
+    letter-spacing: 0px;
+    transition: letter-spacing 0.3s;
+    position: relative;
+
+}
+
+#three3:hover{
+    letter-spacing: 2px;
+}
+#three3:before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+#three3:after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+#three3:hover:before,
+#three3:hover:after{
+    width: 100%;
+}
+
+#four{
+    position: relative;
+}
+#four:hover:before{
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+}
+#four:hover:after{
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+#four:before{
+    content: '';
+    height: 10px;
+    width: 10px;
+    border: 3px solid #fff;
+    border-color: #fff #fff transparent transparent;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transition: all 0.3s;
+}
+#four:after{
+    content: '';
+    height: 10px;
+    width: 10px;
+    border: 3px solid #fff;
+    border-color: transparent transparent #fff #fff;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    transition: all 0.3s;
+}
+
+#five{
+    border: 1px solid #fff;
+    transition: box-shadow 0.4s;
+    position: relative;
+}
+#five:hover{
+    box-shadow:inset 0px 0px 15px #fff;
+}
+#five:before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.6s;
+}
+#five:hover:before{
+    transform: scale(1.2);
+    border: 1px solid transparent;
+
+}
+#six{
+    border: 1px solid #fff;
+    position: relative;
+    transition: color 0.3s cubic-bezier(1,.04,.79,.39);
+}
+#six:hover{
+    color: #EF7E56;
+}
+#six:after{
+    content: '';
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    transition: width 0.3s cubic-bezier(1,.04,.79,.39);
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    z-index: -1;
+}
+#six:hover:after{
+    width: 100%;
+}
+
+#seven{
+    border: 1px solid #fff;
+    position: relative;
+    transition: color 0.5s cubic-bezier(1,.04,.79,.39);
+    overflow: hidden;
+}
+#seven:hover{
+    color: #EF7E56;
+}
+#seven:after{
+    content: '';
+    height: 200%;
+    width: 10%;
+    position: absolute;
+    transition: width 0.3s cubic-bezier(1,.04,.79,.39);
+    bottom: -50px;
+    left: -25px;
+    background-color: #fff;
+    z-index: -1;
+    transform: rotate(15deg);
+}
+#seven:hover:after{
+    width: 200%;
+
+}
+
+#eight{
+    border: 1px solid #fff;
+    position: relative;
+    transition: color 0.4s;
+}
+#eight:hover{
+    color: #EF7E56;
+}
+#eight:before{
+    content: '';
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 0%;
+    width: 100%;
+    background-color: #fff;
+    transition: height 0.6s;
+    z-index: -1;
+}
+#eight:hover:before{
+    height: 100%;
+
+}
+
+
+#eight:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 0%;
+    width: 100%;
+    background-color: #fff;
+    transition: height 0.6s;
+    z-index: -1;
+}
+#eight:hover:after{
+    height: 100%;
+
+}
+
+#nine{
+    border: 1px solid #fff;
+    border-radius: 0px;
+    transition: border-radius 0.3s;
+}
+#nine:hover{
+    border-radius: 50px;
+}
+
+#ten{
+    border: 1px solid #fff;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+#ten:hover{
+    color: #EF7E56;
+}
+#ten:before{
+    content: '';
+    position:absolute;
+    top: -10px;
+    left: -20px;
+    width: 20%;
+    height: 0%;
+    border-radius: 100%;
+    background-color: #fff;
+    transition-property: width, height, border-radius;
+    transition-duration: 0.6s;
+/*            transition-delay: 0s, 0s, .2s;*/
+    z-index: -1;
+}
+#ten:hover:before{
+    border-radius: 0;
+    width: 200%;
+    height: 200%;
 }
